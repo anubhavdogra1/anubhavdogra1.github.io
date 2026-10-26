@@ -131,7 +131,7 @@
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
     var key = form.access_key.value;
-    if (key.indexOf('YOUR_') === 0) {
+    if (key.indexOf("YOUR_") === 0) {
       status.className = 'err';
       status.textContent = 'Form not configured yet — add your Web3Forms access key (see README).';
       return;
