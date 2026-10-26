@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anubhav Dogra — Portfolio</title>
+  <meta name="description" content="Portfolio of Anubhav Dogra: projects, skills, experience and contact.">
+  <meta property="og:title" content="Anubhav Dogra — Portfolio">
+  <meta property="og:description" content="Projects, skills, experience and contact.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="nav" id="top">
+    <a class="logo" href="#top">AD<span>.</span></a>
+    <nav id="menu" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme" class="icon-btn" aria-label="Toggle dark mode">🌓</button>
+      <button id="burger" class="icon-btn burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>Anubhav Dogra</h1>
+      <p class="lead">I build <span id="typed" aria-live="off"></span><span class="caret">|</span></p>
+      <p class="sub">AI engineer and data analyst based in Austin, TX. I design agentic AI systems, RAG pipelines and the evals and tracing that keep them reliable.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View my work</a>
+        <a class="btn" href="resume.pdf" download>Download résumé</a>
+      </div>
+    </section>
+
+    <section id="about" class="reveal">
+      <h2>About</h2>
+      <div class="about">
+        <p>I'm an AI engineer with an MS in Business Analytics from the University at Albany. I started in data analytics, building dashboards and forecasting models, and now focus on LLM applications: multi-agent systems, retrieval-augmented generation, MCP and A2A, and the evaluation and observability needed to ship them with confidence.</p>
+        <ul class="stats">
+          <li><strong data-count="13">0</strong><span>Portfolio projects</span></li>
+          <li><strong data-count="18">0</strong><span>Certifications</span></li>
+          <li><strong data-count="3">0</strong><span>Analyst &amp; dev roles</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h2>Projects</h2>
+      <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+      <div class="grid" id="projectGrid"></div>
+      <p class="muted"><a href="https://github.com/anubhavdogra1?tab=repositories" target="_blank" rel="noopener">See all repositories on GitHub ↗</a></p>
+    </section>
+
+    <section id="experience" class="reveal">
+      <h2>Experience &amp; Education</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <section id="skills" class="reveal">
+      <h2>Skills</h2>
+      <div class="skills" id="skillList"></div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <h2>Contact</h2>
+      <p class="muted">Have a project or opportunity in mind? Send a message.</p>
+      <form id="contactForm" class="form" novalidate>
+        <!-- Web3Forms access key goes here (see README). Free, no backend needed. -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New message from your portfolio">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+        <label>Name <input name="name" required autocomplete="name"></label>
+        <label>Email <input name="email" type="email" required autocomplete="email"></label>
+        <label>Message <textarea name="message" rows="5" required></textarea></label>
+        <button class="btn primary" type="submit">Send message</button>
+        <p id="formStatus" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/anubhavdogra1" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/anubhav-dogra" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:anubhavdogra7@gmail.com">Email</a>
+    </div>
+    <p>© <span id="year"></span> Anubhav Dogra</p>
+  </footer>
+
+  <button id="toTop" class="to-top" aria-label="Back to top" hidden>↑</button>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
